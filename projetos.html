@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Completo | Projepart Engenharia</title>
+    <meta name="description" content="Confira todos os projetos de engenharia mecânica, caldeiraria e estruturas metálicas desenvolvidos pela Projepart.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Navbar Simplificada -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-blue-900 flex items-center gap-2">
+                <i class="fa-solid fa-gears"></i> PROJEPART
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="index.html" class="hover:text-blue-600 transition">Início</a>
+                <a href="index.html#sobre" class="hover:text-blue-600 transition">Sobre</a>
+                <a href="index.html#servicos" class="hover:text-blue-600 transition">Serviços</a>
+                <a href="index.html#portfolio" class="hover:text-blue-600 transition">Portfólio</a>
+                <a href="index.html#contato" class="hover:text-blue-600 transition">Contato</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <a href="index.html#contato" class="md:hidden bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800">
+                Fale Conosco
+            </a>
+        </div>
+    </nav>
+
+    <!-- Header da Página -->
+    <header class="bg-blue-900 text-white pt-20 pb-6 text-center px-6">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold mb-4">Nossos Projetos</h1>
+            <p class="text-xl text-blue-200 max-w-2xl mx-auto">
+                Galeria completa de soluções em engenharia, caldeiraria, mineração e estruturas metálicas.
+            </p>
+        </div>
+    </header>
+
+    <!-- Grid de Projetos -->
+    <section class="py-16 px-6">
+        <div class="container mx-auto">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Item 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/escarificador-mineracao-projeto.png" alt="Projeto Mineração" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/escarificador-mineracao-execucao.png" alt="Peça Pronta" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Peças de Mineração</h3>
+                        <p class="text-gray-600 text-sm">Escarificador de mineração e peças para instalações</p>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/cacamba-cartepilar-projeto.png" alt="Projeto Caçamba" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/cacamba-cartepilar-execucao.png" alt="Caçamba Pronta" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Caçambas Caterpillar</h3>
+                        <p class="text-gray-600 text-sm">Compatível com 320D, 300mm e similares</p>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/estrutura-metalica-projeto.png" alt="Projeto Estrutura" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/estrutura-metalica-execucao.png" alt="Estrutura Montada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Estruturas Metálicas</h3>
+                        <p class="text-gray-600 text-sm">Estrutura para parque aquático, galpões e pórticos</p>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/peca-mineracao-projeto.png" alt="Projeto Mineração" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/peca-mineracao-execucao.png" alt="Peça Executada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Componentes de Mineração</h3>
+                        <p class="text-gray-600 text-sm">Peças técnicas e de reposição</p>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/cacamba-especial-projeto.png" alt="Projeto Caçamba" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/cacamba-especial-execucao.png" alt="Caçamba Executada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Caçambas Especiais</h3>
+                        <p class="text-gray-600 text-sm">Projetos sob medida e reforçados</p>
+                    </div>
+                </div>
+
+                <!-- Item 6 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/guincho-projeto1.png" alt="Projeto Guincho" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/guincho-projeto2.png" alt="Guincho Executado" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Guincho Pega Bag</h3>
+                        <p class="text-gray-600 text-sm">Equipamento para movimentação de cargas</p>
+                    </div>
+                </div>
+
+                <!-- Item 7 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/elevador-projeto1.png" alt="Projeto Elevador" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/elevador-projeto2.png" alt="Elevador Executado" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Elevador de Carga</h3>
+                        <p class="text-gray-600 text-sm">Elevador industrial para transporte vertical</p>
+                    </div>
+                </div>
+
+                <!-- Item 8 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/escada-para-parque-aquatico-projeto1.png" alt="Projeto Escada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/escada-para-parque-aquatico-projeto2.png" alt="Escada Executada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Escada para Parque Aquático</h3>
+                        <p class="text-gray-600 text-sm">Escadas e estruturas de acesso</p>
+                    </div>
+                </div>
+
+                <!-- Item 9 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg cursor-pointer bg-white">
+                    <div class="flex h-64 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/tanque-caldeiraria-projeto-1.png" alt="Projeto 3D" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/tanque-caldeiraria-projeto2.png" alt="Obra Executada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                    </div>
+                    <div class="p-4 text-center border-t">
+                        <h3 class="text-blue-900 font-bold text-lg">Caldeiraria e Tanques</h3>
+                        <p class="text-gray-600 text-sm">Tanques para combustível e projetos industriais</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Projepart Engenharia e Projetos. Todos os direitos reservados.</p>
+            <p class="mt-2">Daniel Souza - CREA 1018281134D-GO</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5562999401905" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50 text-3xl flex items-center justify-center w-16 h-16">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+</body>
+</html>
