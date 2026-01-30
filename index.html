@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projepart Engenharia e Projetos | Daniel Souza</title>
+    <meta name="description" content="Soluções em Engenharia Mecânica, Caldeiraria, Estruturas Metálicas e Projetos Industriais em Sorriso - MT.">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <style>
+        body { font-family: 'Roboto', sans-serif; }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .scroll-smooth { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 scroll-smooth">
+
+    <!-- Header / Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-900 flex items-center gap-2">
+                <i class="fa-solid fa-gears"></i> PROJEPART
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#inicio" class="hover:text-blue-600 transition">Início</a>
+                <a href="#sobre" class="hover:text-blue-600 transition">Sobre</a>
+                <a href="#servicos" class="hover:text-blue-600 transition">Serviços</a>
+                <a href="#portfolio" class="hover:text-blue-600 transition">Portfólio</a>
+                <a href="#contato" class="hover:text-blue-600 transition">Contato</a>
+            </div>
+            <!-- Mobile Menu Button (Simples) -->
+            <a href="#contato" class="md:hidden bg-blue-900 text-white px-4 py-2 rounded hover:bg-blue-800">
+                Fale Conosco
+            </a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero-bg h-screen flex items-center justify-center text-white text-center px-6">
+        <div class="max-w-4xl">
+            <h1 class="text-4xl md:text-6xl font-black mb-4 uppercase tracking-wide">
+                Engenharia Mecânica & <br> <span class="text-blue-400">Soluções Industriais</span>
+            </h1>
+            <p class="text-xl md:text-2xl mb-8 font-light">
+                Especialistas em Caldeiraria, Estruturas Metálicas, Projetos de Máquinas e Gestão de Obras.
+            </p>
+            <div class="flex flex-col md:flex-row gap-4 justify-center">
+                <a href="https://wa.me/5562999401905" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-full transition flex items-center justify-center gap-2">
+                    <i class="fa-brands fa-whatsapp"></i> Solicitar Orçamento
+                </a>
+                <a href="#portfolio" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-900 text-white font-bold py-3 px-8 rounded-full transition">
+                    Ver Projetos
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre / Expertise -->
+    <section id="sobre" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Sobre a Projepart</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    Atuamos com engenharia de fabricação, otimização, gestão de projetos e análise estrutural.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div class="p-6 border rounded-lg hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="fa-solid fa-industry"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Caldeiraria & Tanques</h3>
+                    <p class="text-gray-600">Planificação, traçados, planos de cortes e estrutural de tanques cilíndricos e combustíveis.</p>
+                </div>
+                <div class="p-6 border rounded-lg hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Estruturas Metálicas</h3>
+                    <p class="text-gray-600">Galpões, mezaninos, escadas, pórticos linha de vida e estruturas para parques aquáticos.</p>
+                </div>
+                <div class="p-6 border rounded-lg hover:shadow-lg transition">
+                    <div class="text-blue-600 text-4xl mb-4"><i class="fa-solid fa-compass-drafting"></i></div>
+                    <h3 class="text-xl font-bold mb-2">Projetos & Engenharia</h3>
+                    <p class="text-gray-600">Desenho técnico, modelagem 3D, simulação estrutural (FEA) e engenharia reversa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços Detalhados -->
+    <section id="servicos" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serviços de Engenharia Mecânica</h2>
+                <div class="w-20 h-1 bg-blue-600 mx-auto"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white p-6 rounded shadow hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-blue-900 mb-3 border-b pb-2">1. Projetos e Desenvolvimento</h4>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                        <li>Projeto mecânico completo</li>
+                        <li>Projeto de tubulação (piping)</li>
+                        <li>Simulação estrutural (FEA)</li>
+                        <li>Dispositivos de segurança (NR-12)</li>
+                        <li>Ventilação industrial (HVAC)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white p-6 rounded shadow hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-blue-900 mb-3 border-b pb-2">2. Inspeções e Laudos</h4>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                        <li>Laudo técnico mecânico</li>
+                        <li>Laudo NR-12 / Adequação</li>
+                        <li>Laudo de integridade mecânica</li>
+                        <li>Avaliação de Muncks e Guindastes</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-6 rounded shadow hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-blue-900 mb-3 border-b pb-2">3. Documentação Técnica</h4>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                        <li>As-built e Memorial descritivo</li>
+                        <li>Memorial de cálculo</li>
+                        <li>Manuais de operação</li>
+                        <li>Procedimentos (POP/SOP)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white p-6 rounded shadow hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-blue-900 mb-3 border-b pb-2">4. Montagem e Operação</h4>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                        <li>Plano de Rigging / Elevação</li>
+                        <li>Supervisão de montagem</li>
+                        <li>Comissionamento e Start-up</li>
+                        <li>Análise de falhas (RCFA)</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white p-6 rounded shadow hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-blue-900 mb-3 border-b pb-2">5. Engenharia Reversa</h4>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                        <li>Digitalização 3D de peças</li>
+                        <li>Reengenharia para vida útil</li>
+                        <li>Análise de materiais</li>
+                        <li>Revisão dimensional</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-white p-6 rounded shadow hover:shadow-md transition">
+                    <h4 class="font-bold text-lg text-blue-900 mb-3 border-b pb-2">6. Novos Produtos</h4>
+                    <ul class="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                        <li>Estudos de viabilidade</li>
+                        <li>Design mecânico detalhado</li>
+                        <li>Seleção de materiais</li>
+                        <li>Modelagem 3D avançada</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfólio -->
+    <section id="portfolio" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Portfólio de Projetos</h2>
+                <p class="text-gray-600">Alguns dos trabalhos desenvolvidos e equipamentos projetados.</p>
+            </div>
+
+            <!-- Swiper -->
+            <div class="swiper portfolioSwiper pb-12">
+                <div class="swiper-wrapper">
+                <!-- Item Portfolio -->
+                <div class="swiper-slide group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <div class="flex h-72 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=600&q=80" alt="Projeto 3D" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1535069600680-66075142a76d?auto=format&fit=crop&w=600&q=80" alt="Obra Executada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-center">
+                        <h3 class="text-white font-bold text-lg">Tanques de Combustível</h3>
+                        <p class="text-gray-300 text-sm">Cálculo estrutural e fabricação</p>
+                    </div>
+                </div>
+
+                <!-- Item Portfolio -->
+                <div class="swiper-slide group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <div class="flex h-72 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/escarificador-mineracao.png" alt="Projeto Mineração" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/escarificador-mineracao.png" alt="Peça Pronta" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-center">
+                        <h3 class="text-white font-bold text-lg">Peças de Mineração</h3>
+                        <p class="text-gray-300 text-sm">Escarificadores e componentes</p>
+                    </div>
+                </div>
+
+                <!-- Item Portfolio -->
+                <div class="swiper-slide group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <div class="flex h-72 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/cacamba-cartepilar.png" alt="Projeto Caçamba" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/cacamba-cartepilar.png" alt="Caçamba Pronta" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-center">
+                        <h3 class="text-white font-bold text-lg">Caçambas Caterpillar</h3>
+                        <p class="text-gray-300 text-sm">Modelos 320D e similares (300mm)</p>
+                    </div>
+                </div>
+
+                <!-- Item Portfolio -->
+                <div class="swiper-slide group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <div class="flex h-72 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="/estrutura-metalica.png" alt="Projeto Estrutura" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="/estrutura-metalica.png" alt="Estrutura Montada" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-center">
+                        <h3 class="text-white font-bold text-lg">Estruturas Metálicas</h3>
+                        <p class="text-gray-300 text-sm">Parques aquáticos, pórticos e galpões</p>
+                    </div>
+                </div>
+
+                 <!-- Item Portfolio -->
+                 <div class="swiper-slide group relative overflow-hidden rounded-lg shadow-lg cursor-pointer">
+                    <div class="flex h-72 w-full">
+                        <div class="w-1/2 h-full relative border-r border-white/20 overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=600&q=80" alt="Projeto Elevação" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+                        </div>
+                        <div class="w-1/2 h-full relative overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=600&q=80" alt="Equipamento Real" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                            <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition duration-300 p-4 text-center">
+                        <h3 class="text-white font-bold text-lg">Sistemas de Carga</h3>
+                        <p class="text-gray-300 text-sm">Elevadores de carga, Guinchos pega bag e Planos de Rigging</p>
+                    </div>
+                </div>
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next !text-blue-900"></div>
+                <div class="swiper-button-prev !text-blue-900"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA / Contato -->
+    <section id="contato" class="py-20 bg-blue-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold mb-6">Vamos tirar seu projeto do papel?</h2>
+                    <p class="text-blue-200 mb-8 text-lg">
+                        Entre em contato com a Projepart Engenharia para estudos de viabilidade, projetos mecânicos ou consultoria técnica.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-300">Responsável Técnico</p>
+                                <p class="font-bold">Daniel Souza</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-300">Celular / WhatsApp</p>
+                                <a href="https://wa.me/5562999401905" class="font-bold hover:text-blue-300 transition">(62) 9 9940-1905</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-300">E-mail</p>
+                                <a href="mailto:c.sdaniel@outlook.com" class="font-bold hover:text-blue-300 transition">c.sdaniel@outlook.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center text-xl">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <p class="text-sm text-blue-300">Localização</p>
+                                <p class="font-bold">Sorriso – MT</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulário Simples -->
+                <div class="bg-white text-gray-800 p-8 rounded-lg shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6">Envie uma mensagem</h3>
+                    <form action="#" method="POST">
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2">Nome</label>
+                            <input type="text" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2">Email</label>
+                            <input type="email" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="seu@email.com">
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2">Mensagem</label>
+                            <textarea class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500 h-32" placeholder="Como podemos ajudar?"></textarea>
+                        </div>
+                        <button type="button" class="w-full bg-blue-900 text-white font-bold py-3 rounded hover:bg-blue-800 transition">
+                            Enviar Mensagem
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-8 text-center text-sm">
+        <div class="container mx-auto px-6">
+            <p>&copy; 2026 Projepart Engenharia e Projetos. Todos os direitos reservados.</p>
+            <p class="mt-2">Daniel Souza</p>
+        </div>
+    </footer>
+
+    <!-- Botão Flutuante WhatsApp -->
+    <a href="https://wa.me/5562999401905" target="_blank" class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition z-50 text-3xl flex items-center justify-center w-16 h-16">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".portfolioSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            breakpoints: {
+                1024: {
+                    slidesPerView: 2,
+                },
+            },
+        });
+    </script>
+</body>
+</html>
