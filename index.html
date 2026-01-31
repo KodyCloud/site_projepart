@@ -384,25 +384,30 @@
                 <div class="bg-white text-gray-800 p-8 rounded-lg shadow-xl">
                     <h3 class="text-2xl font-bold mb-6">Envie uma mensagem</h3>
                     <!-- Substitua 'seu@email.com' pelo seu email real -->
-                    <form id="contactForm" action="https://formsubmit.co/d2b53ef4f8e66c843d148cdf13fff4f5" method="POST">
+                    <form id="contactForm" action="https://formsubmit.co/4d192da8a7ce18dc83c550dce159a1a4 " method="POST">
                         <!-- Campo oculto para evitar SPAM -->
                         <input type="text" name="_honey" style="display:none">
+                        
+                        <!-- Personalização do Email -->
+                        <input type="hidden" name="_subject" value="Novo Contato - Site Projepart">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
 
                         <div class="mb-4">
                             <label class="block text-sm font-bold mb-2">Nome</label>
-                            <input type="text" name="nome" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="Seu nome" required>
+                            <input type="text" name="Nome" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="Seu nome" required>
                         </div>
                         <div class="mb-4">
                             <label class="block text-sm font-bold mb-2">Email</label>
-                            <input type="email" name="email" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="seu@email.com" required>
+                            <input type="email" name="Email" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="seu@email.com" required>
                         </div>
                         <div class="mb-4">
                             <label class="block text-sm font-bold mb-2">Telefone</label>
-                            <input type="tel" name="telefone" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="(00) 00000-0000">
+                            <input type="tel" name="Telefone" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500" placeholder="(00) 00000-0000">
                         </div>
                         <div class="mb-4">
                             <label class="block text-sm font-bold mb-2">Mensagem</label>
-                            <textarea name="mensagem" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500 h-32" placeholder="Como podemos ajudar?" required></textarea>
+                            <textarea name="Mensagem" class="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500 h-32" placeholder="Como podemos ajudar?" required></textarea>
                         </div>
                         <button type="submit" class="w-full bg-blue-900 text-white font-bold py-3 rounded hover:bg-blue-800 transition">
                             Enviar Mensagem
