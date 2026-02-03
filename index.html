@@ -72,7 +72,7 @@
 <body class="bg-gray-50 text-gray-800 scroll-smooth">
 
     <!-- Header / Navbar -->
-    <nav id="navbar" class="bg-white shadow-md fixed w-full z-50 transition-colors duration-300">
+    <nav id="navbar" class="bg-white shadow-md fixed w-full z-50 transition-colors duration-300 text-gray-800">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center">
                 <img src="logo.png" alt="Projepart Engenharia" class="h-16">
@@ -514,19 +514,112 @@
 
         closeModal.addEventListener('click', () => modal.classList.add('hidden'));
 
-        // Navbar Transparente ao Scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) {
-                navbar.classList.add('bg-white', 'shadow-md', 'text-gray-800');
-                navbar.classList.remove('bg-transparent', 'text-white');
-            } else {
-                navbar.classList.add('bg-transparent', 'text-white');
-                navbar.classList.remove('bg-white', 'shadow-md', 'text-gray-800');
+        // --- Lógica do Modal de Projetos ---
+        let projectsData = [];
+        let currentProjectIndex = 0;
+
+        // Coleta os dados dos projetos (ignorando duplicatas do loop do Swiper)
+        function initProjectsData() {
+            const slides = document.querySelectorAll('.portfolioSwiper .swiper-slide:not(.swiper-slide-duplicate)');
+            projectsData = Array.from(slides).map(slide => {
+                const imgs = slide.querySelectorAll('img');
+                const title = slide.querySelector('h3') ? slide.querySelector('h3').innerText : '';
+                return {
+                    img1: imgs[0] ? imgs[0].src : '',
+                    img2: imgs[1] ? imgs[1].src : '',
+                    title: title
+                };
+            });
+        }
+        window.addEventListener('load', initProjectsData);
+
+        function openProjectModal(element) {
+            if (projectsData.length === 0) initProjectsData();
+
+            const imgs = element.querySelectorAll('img');
+            const title = element.querySelector('h3') ? element.querySelector('h3').innerText : '';
+            const src1 = imgs[0] ? imgs[0].src : '';
+            
+            // Encontra o índice do projeto clicado
+            currentProjectIndex = projectsData.findIndex(p => p.img1 === src1);
+            if (currentProjectIndex === -1) currentProjectIndex = 0;
+
+            updateModalContent();
+            
+            const modal = document.getElementById('imageModal');
+            const content = document.getElementById('modalContent');
+            
+            modal.classList.remove('hidden');
+            // Pequeno delay para ativar a animação CSS
+            setTimeout(() => {
+                content.classList.remove('scale-90', 'opacity-0');
+                content.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            const content = document.getElementById('modalContent');
+            
+            content.classList.remove('scale-100', 'opacity-100');
+            content.classList.add('scale-90', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300); // Tempo da transição
+        }
+
+        function changeProject(direction) {
+            currentProjectIndex += direction;
+            if (currentProjectIndex < 0) currentProjectIndex = projectsData.length - 1;
+            if (currentProjectIndex >= projectsData.length) currentProjectIndex = 0;
+            updateModalContent();
+        }
+
+        function updateModalContent() {
+            const project = projectsData[currentProjectIndex];
+            if (!project) return;
+            document.getElementById('modalImg1').src = project.img1;
+            document.getElementById('modalImg2').src = project.img2;
+            document.getElementById('modalTitle').innerText = project.title;
+        }
+
+        // Event Delegation para o Swiper
+        document.querySelector('.portfolioSwiper').addEventListener('click', function(e) {
+            const item = e.target.closest('.swiper-slide');
+            if (item && !e.target.closest('.swiper-button-next') && !e.target.closest('.swiper-button-prev')) {
+                openProjectModal(item);
             }
         });
-        // Inicializa o estado
-        window.dispatchEvent(new Event('scroll'));
     </script>
+
+    <!-- Modal de Zoom -->
+    <div id="imageModal" class="fixed inset-0 z-[70] bg-black bg-opacity-90 hidden flex items-center justify-center p-4" onclick="if(event.target === this) closeImageModal()">
+        <!-- Botão Fechar -->
+        <button class="absolute top-4 right-4 text-white text-4xl hover:text-gray-300 focus:outline-none z-[80]" onclick="closeImageModal()">&times;</button>
+        
+        <!-- Botão Anterior -->
+        <button class="absolute left-2 md:left-8 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl hover:text-gray-300 z-[80] focus:outline-none p-2" onclick="changeProject(-1)">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <!-- Botão Próximo -->
+        <button class="absolute right-2 md:right-8 top-1/2 transform -translate-y-1/2 text-white text-4xl md:text-6xl hover:text-gray-300 z-[80] focus:outline-none p-2" onclick="changeProject(1)">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+
+        <!-- Conteúdo do Modal com Animação -->
+        <div id="modalContent" class="max-w-6xl w-full bg-white rounded-lg overflow-hidden flex flex-col md:flex-row shadow-2xl max-h-[90vh] transform transition-all duration-300 scale-90 opacity-0">
+            <div class="w-full md:w-1/2 h-64 md:h-[80vh] relative bg-gray-900">
+                 <img id="modalImg1" src="" class="w-full h-full object-contain">
+                 <span class="absolute bottom-0 left-0 bg-blue-900/80 text-white text-xs font-bold px-3 py-1">PROJETO 3D</span>
+            </div>
+            <div class="w-full md:w-1/2 h-64 md:h-[80vh] relative bg-gray-900">
+                 <img id="modalImg2" src="" class="w-full h-full object-contain">
+                 <span class="absolute bottom-0 left-0 bg-green-700/80 text-white text-xs font-bold px-3 py-1">EXECUÇÃO</span>
+            </div>
+        </div>
+        <div id="modalTitle" class="absolute bottom-4 left-0 w-full text-center text-white text-xl font-bold drop-shadow-md pointer-events-none"></div>
+    </div>
 </body>
 </html>
