@@ -17,7 +17,7 @@
     <meta property="og:image" content="https://www.projepart.com/logo.png">
     
     <!-- Favicon -->
-    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="icon" href="favicon-sf.png" type="image/png">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -72,10 +72,10 @@
 <body class="bg-gray-50 text-gray-800 scroll-smooth">
 
     <!-- Header / Navbar -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
+    <nav id="navbar" class="bg-white shadow-md fixed w-full z-50 transition-colors duration-300">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="flex items-center">
-                <img src="logo.png" alt="Projepart Engenharia" class="h-12">
+                <img src="logo.png" alt="Projepart Engenharia" class="h-16">
             </a>
             <div class="hidden md:flex space-x-8 font-medium">
                 <a href="#inicio" class="hover:text-blue-600 transition">Início</a>
@@ -192,7 +192,6 @@
                         <li>Plano de Rigging / Elevação</li>
                         <li>Supervisão de montagem</li>
                         <li>Comissionamento e Start-up</li>
-                        <li>Análise de falhas (RCFA)</li>
                     </ul>
                 </div>
 
@@ -384,8 +383,7 @@
                             </div>
                             <div>
                                 <p class="text-sm text-blue-300">Localização</p>
-                                <p class="font-bold">Rua Pedra Preciosa, 1055</p>
-                                <p class="text-sm">Rota do Sol, Sorriso – MT</p>
+                                <p class="font-bold">Sorriso – MT</p>
                             </div>
                         </div>
 
@@ -436,6 +434,13 @@
         <div class="container mx-auto px-6">
             <p>&copy; 2026 Projepart Engenharia e Projetos. Todos os direitos reservados.</p>
             <p class="mt-2">Daniel Souza - CREA 1018281134D-GO</p>
+            <p class="mt-1">
+                CNPJ: 64.477.880/0001-74
+                <span class="mx-2">|</span>
+                <a href="https://www.instagram.com/projepart?igsh=YjBocDZ4a21sM3Jr&utm_source=qr" target="_blank" class="hover:text-white transition">
+                    <i class="fa-brands fa-instagram"></i> Instagram
+                </a>
+            </p>
         </div>
     </footer>
 
@@ -508,6 +513,20 @@
         });
 
         closeModal.addEventListener('click', () => modal.classList.add('hidden'));
+
+        // Navbar Transparente ao Scroll
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('bg-white', 'shadow-md', 'text-gray-800');
+                navbar.classList.remove('bg-transparent', 'text-white');
+            } else {
+                navbar.classList.add('bg-transparent', 'text-white');
+                navbar.classList.remove('bg-white', 'shadow-md', 'text-gray-800');
+            }
+        });
+        // Inicializa o estado
+        window.dispatchEvent(new Event('scroll'));
     </script>
 </body>
 </html>
